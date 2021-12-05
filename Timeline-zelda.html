@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>薩爾達故事</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;500;700;900&display=swap");
+      
+        *{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        html, body{
+            height: 100%;
+        }
+        body{
+            background: url("princess.jpg") no-repeat center center / cover, 
+                        url("time-line2.jpg") center center / cover; 
+        }
+        
+        .container{
+            width: 1200px;
+            margin: auto;
+           
+        }
+
+        .timeline::after{
+            content: '';
+            display: block;
+            height: 0px;
+            width: 100%;
+            clear: both;
+        }
+        
+        .title{
+            margin: 40px 0;
+            text-align: center;
+            color: #fff;
+        }
+        .title h2{
+            margin-bottom: 0.3em;
+            font-size: 36px;
+            color: #eee;
+            font-weight: 900;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, .4);
+        }
+        .title p{
+            font-size: 22px;
+            font-weight: 700;
+            color: #eee;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, .4);
+        }
+        .timeline{
+            padding: 50px 0 100px;
+        }
+
+        .timeline li{
+          width: 50%;
+          box-sizing: border-box;
+          padding: 20px;
+          position: relative;
+
+          
+        }
+
+        .timeline li a{
+            display: block;
+            padding: 20px;
+            border: 1px solid #ccc;
+            text-decoration: none;
+            border-radius: 20px;
+            box-sizing: border-box;
+            background-color: #fff;
+
+        }
+        .timeline li:nth-child(odd){
+            float: left;
+            padding-right: 100px;
+            clear: left;
+         
+        }
+
+        .timeline li:nth-child(even){
+            float: right;
+            padding-left: 100px;
+            transform: translateY(50px);
+            
+        }
+        .timeline li h3{
+            font-size: 1.2em;
+            padding-bottom: .4em;
+            margin-bottom: .4em;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-weight: 500;
+            color: #333;
+            position: relative;
+        }
+        .timeline li h3::after{
+            content: '';
+            position: absolute;
+            width: 4em;
+            height: .1em;
+            background-color: #fff;
+            left: 0;
+            bottom: 0;
+        }
+
+        .timeline li p{
+            line-height: 1.4;
+            font-family: 'Noto Sans TC', sans-serif;
+            font-weight: 300;
+            color: #333;
+        }
+        
+        .timeline li:nth-child(odd)::after{
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            background-color: #ddd;
+            top: 0;
+           right: 0;
+           z-index: -1;
+        }
+        .timeline li:last-child::after{
+            height: 50px;
+        }
+
+        .timeline li::before{
+            content:'';
+            position:absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #ddd;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            z-index: 2;
+        }
+        .timeline li:nth-child(odd)::before{
+            right: -10px;
+        }
+
+        .timeline li:nth-child(even)::before{
+            left: -10px;
+        }
+
+        .timeline li p::before{
+            content: '';
+            position: absolute;
+            width: 5.7em;
+            height: 1px;
+            background-color: #fff;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        .timeline li:nth-child(odd) p::before{
+            right: .5em;
+        }
+
+        .timeline li:nth-child(even) p::before{
+            left: .5em;
+        }
+
+        .timeline li:hover >a{
+            background-color: #0f0c29;
+            color: #fff;
+        }
+        .timeline li:hover p, .timeline li:hover h3{
+            color: #fff;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h2>薩爾達傳說故事線</h2>
+            <p>講述一百年前海拉魯王國被伽濃攻陷的故事</p>
+        </div>
+        <ul class="timeline">
+            <li>
+                <a href="#">
+                    <h3>初始之日</h3>
+                    <p>講述林克沉睡了100年後,終於在初台之地醒過來</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h3>神秘老人</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores incidunt dicta quas deleniti quaerat nam vero et quasi repellat, ipsa omnis nulla atque illo distinctio voluptas, nesciunt suscipit temporibus libero.</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h3>魔怪</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam cumque alias quos, molestiae asperiores, distinctio illum nesciunt ea deleniti similique doloribus neque vel quae eveniet rerum fugiat unde in quisquam?</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h3>神廟</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam blanditiis dolor aliquid libero. Corporis odit omnis, unde minus sint nobis!</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h3>高塔</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti nisi labore cupiditate deleniti ab ducimus, voluptatum delectus similique repudiandae perspiciatis!</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h3>海拉魯王國</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A nesciunt consectetur optio eum enim dignissimos excepturi atque voluptates voluptatum in perspiciatis quas nam nulla, qui facilis fugiat? Quis, in quod?</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
